@@ -1,7 +1,7 @@
-package AngajatiApp.model;
+package baci0176MV.model;
 
-import AngajatiApp.controller.DidacticFunction;
-import AngajatiApp.validator.EmployeeException;
+import baci0176MV.controller.DidacticFunction;
+import baci0176MV.validator.EmployeeException;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
