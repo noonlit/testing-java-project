@@ -6,6 +6,8 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import java.util.concurrent.TimeUnit;
+
 import static java.time.Duration.ofMillis;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -140,6 +142,17 @@ class EmployeeTest {
                 fail();
             }
         });
+    }
+
+    @Test
+    @Timeout(value = 5, unit = TimeUnit.MILLISECONDS)
+    @Disabled
+    void getHashShouldNotTakeMoreThan5msWithAnnotation() {
+            try {
+                defaultEmployee.hashCode();
+            } catch (Exception | Error e) {
+                fail();
+            }
     }
 
     /**
