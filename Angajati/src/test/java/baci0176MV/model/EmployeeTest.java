@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 import static java.time.Duration.ofMillis;
 import static org.junit.jupiter.api.Assertions.*;
 
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 class EmployeeTest {
     /**
      * field to use for ordered tests and @AfterAll
